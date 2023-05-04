@@ -5,5 +5,13 @@ RSpec.describe "Posts", type: :system do
     driven_by(:rack_test)
   end
 
-  pending "add some scenarios (or delete) #{__FILE__}"
+  describe 'index page' do
+    context 'when displaying idex page' do
+      let!(:post) { create(:post) }
+      it 'displayed the content' do
+        visit posts_index_path
+        expect(page).to have_content post.content
+      end
+    end
+  end
 end
