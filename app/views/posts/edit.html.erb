@@ -2,7 +2,7 @@
 <div>
   <%= form_with model: @post, url: post_update_path(@post.id), method: :post do |f|%>
     <%= f.label "投稿内容"%>
-    <%= f.text_field :content%>
+    <%= f.text_field :content %>
     <%= f.submit "編集完了"%>
   <% end %>
 </div>

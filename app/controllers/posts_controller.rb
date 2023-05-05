@@ -24,8 +24,14 @@ class PostsController < ApplicationController
   end
 
   def update
+    @post = Post.find_by(id: params[:id])
+    if @post.update(content: params[:post][:content])
+      flash[:notice] = "編集に成功しました"
+    end
+    redirect_to("/posts/index")
   end
 
   def delete
+    
   end
 end
