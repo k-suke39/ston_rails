@@ -8,9 +8,17 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
   end
 
   def create
+    post = Post.new(content: params[:content])
+    if post.save
+      flash[:notice] = "投稿に成功しました"
+      redirect_to("/posts/index")
+    end
+    
+    
   end
 
   def edit
