@@ -17,7 +17,6 @@ class PostsController < ApplicationController
       flash[:notice] = "投稿に成功しました"
       redirect_to("/posts/index")
     end
-    
   end
 
   def edit
