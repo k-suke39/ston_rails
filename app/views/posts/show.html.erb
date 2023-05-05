@@ -2,3 +2,4 @@
 <p><%= @post.content%></p>
 <p><%= @post.id%></p>
 <p><%= link_to("編集する", "/posts/#{@post.id}/edit")%></p>
+<p><%= link_to("削除する", "/posts/#{@post.id}/delete", data: { "turbo-method": :post })%></p>

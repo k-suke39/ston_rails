@@ -32,6 +32,10 @@ class PostsController < ApplicationController
   end
 
   def delete
-    
+    post = Post.find_by(id: params[:id])
+    if post.delete
+      flash[:notice] = "削除に成功しました"
+      redirect_to("/posts/index")
+    end
   end
 end
