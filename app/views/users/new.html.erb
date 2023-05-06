@@ -1,2 +1,19 @@
-<h1>ユーザ登録画面</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<section class="l-content-fixed section">
+  <header class="section-header">
+	<h2 class="section-title">新規登録</h2>
+    <p class="section-subtitle">SignUp</p>
+  </header>
+  <div class="section-form">
+    <%= form_with url: "/signup", class: "form-simple" do |f|%>
+    <%= f.label "名前",  class: "form-label"%>
+    <%= f.text_field :name, class: "form-input"%>
+    <%= f.label "メールアドレス",  class: "form-label"%>
+    <%= f.text_field :email, class: "form-input"%>
+    <%= f.label "パスワード", class: "form-label"%>
+    <%= f.text_field :password, class: "form-input"%>
+    <p class="form-btn-holder">
+      <%= f.submit "保存する", class: "btn", data: { disable_with: "送信中..." }%>
+    </p>
+    <% end %>
+  </div>
+</section>
