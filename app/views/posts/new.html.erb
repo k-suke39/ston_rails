@@ -1,8 +1,16 @@
-<h1>新規投稿画面</h1>
-<div>
-  <%= form_with url: posts_create_path do |f|%>
-    <%= f.label "投稿内容"%>
-    <%= f.text_field :content%>
-    <%= f.submit "送る"%>
-  <% end %>
-</div>
+
+		<section class="l-content-fixed section">
+			<header class="section-header">
+				<h2 class="section-title">Content</h2>
+				<p class="section-subtitle">新規投稿</p>
+			</header>
+      <div class="section-form">
+        <%= form_with url: posts_create_path, class: "form-simple" do |f|%>
+          <%= f.label "投稿内容", class: "form-label"%>
+          <%= f.text_field :content, class: "form-input"%>
+          <p class="form-btn-holder">
+            <%= f.submit "保存する", class: "btn"%>
+          </p>
+        <% end %>
+      </div>
+		</section>

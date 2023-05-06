@@ -13,3 +13,307 @@
  *= require_tree .
  *= require_self
  */
+
+ /*  default */
+
+#container {
+	min-width: 980px;
+}
+.l-content-fixed {
+	width: 980px;
+	margin: 0 auto;
+}
+.l-content-expanded {
+	width: auto;
+	margin: 0;
+}
+.l-multicolumn {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	margin: 50px -20px;
+}
+.l-3column > .l-column {
+	width: calc(100% / 3);
+	padding: 0 20px;
+}
+.l-2column > .l-column {
+	width: 45%;
+}
+
+@import url("normalize.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
+html, body {
+	padding: 0;
+	margin: 0;
+}
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+html {
+	line-height: 1.6;
+	font-size: 16px;
+	font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
+	"ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", sans-serif;
+}
+body {
+	color: #333;
+	background-color: white;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+p {
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	opacity: 0.7;
+}
+
+/*  header */
+.header {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+}
+.header-logo {
+	margin: 0;
+	font-size: 2em;
+	line-height: 1;
+}
+.header-logo img {
+	width: 6em;
+	height: 100%;
+}
+
+ /*  nav-menu */
+
+.nav-menu {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	font-size: 1rem;
+}
+.nav-menu-item + .nav-menu-item {
+	margin-left: 2em;
+}
+.nav-menu-item a {
+	color: #333;
+	font-weight: bold;
+}
+.nav-menu-item .btn_highlighted {
+	color: white;
+}
+
+/*  btn */
+
+.btn {
+  display: inline-block;
+  padding: 0.6em 1em;
+  border: 2px solid #333;
+  border-radius: 2em;
+  box-shadow: 3px 4px rgba(51, 51, 51, 0.15);
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn_highlighted {
+  border: none;
+  background-color: #009BFF;
+  box-shadow: none;
+  color: white;
+  font-weight: bold;
+}
+.btn_menuitem {
+  padding: 0.3em 1em;
+}
+
+ /*  nav-menu */
+
+.footer {
+	background-color: #009BFF;
+}
+.footer-content {
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	-webkit-align-items: center;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	font-size: 1rem;
+	line-height: 1;
+	color: white;
+}
+.footer-copy small {
+	font-size: 1rem;
+	font-family: "Montserrat", sans-serif;
+}
+.footer-totop {
+	position: absolute;
+	top: -32px;
+	right: 20px;
+	width: 64px;
+	height: 64px;
+	margin: 0;
+	background-color: #009BFF;
+	border-radius: 50%;
+	-webkit-filter: drop-shadow(3px 4px 0 rgba(0,0,0,0.15));
+	filter: drop-shadow(3px 4px 0 rgba(0,0,0,0.15));
+	cursor: pointer;
+}
+.footer-totop::before {
+	position: absolute;
+	content: "";
+	top: 50%;
+	left: 50%;
+	width: 14px;
+	height: 14px;
+	border-top: 3px solid #FFF;
+	border-right: 3px solid #FFF;
+	-webkit-transform: rotate(-45deg) translate(-25%, -50%);
+	transform: rotate(-45deg) translate(-25%, -50%);
+}
+
+
+ /*  section */
+
+.section {
+  padding: 60px 0;
+  font-size: 1rem;
+  text-align: center;
+}
+.section-header {
+  margin: 0 0 2.5em 0;
+  line-height: 1.2;
+}
+.section-title {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+}
+.section-subtitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+.section-item-symbol {
+  height: 120px;
+}
+.section-item-title {
+  margin: 1em 0 0.5em 0;
+  font-size: 1.5em;
+  text-align: center;
+}
+.section-item-description {
+  margin: 0;
+  font-size: 1em;
+  text-align: left;
+}
+.section .btn {
+  padding: .75rem 1rem;
+  width: 15rem;
+  font-size: 1em;
+}
+.section-map {
+  width: 100%;
+  margin-top: 5em;
+}
+.section-item-img {
+  width: 100%;
+  border: 2px solid #333;
+  border-radius: 8px;
+}
+.section-item-info-title>time {
+  margin-right: 1em;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #999;
+}
+.section-item-info-title {
+  margin: 0;
+  font-size: .875rem;
+  color: #55C299;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+.section-item-info {
+  margin: 0.2em 0;
+  font-size: 1.1em;
+  text-align: left;
+  line-height: 1.4;
+  color: #333;
+}
+.section_reverse {
+  padding: 90px 0;
+  margin: 60px 0;
+  color: white;
+}
+.section_recruit {
+  background: url(../../images/image-recruit.png) no-repeat center center;
+  background-size: cover;
+}
+.section-description {
+  margin: 60px auto;
+  font-size: 1em;
+  text-align: center;
+}
+.section-description p {
+  margin: 1.5em 0;
+}
+.section-form {
+  width: 60%;
+  margin: 2em auto;
+}
+
+
+ /*  section */
+
+.form-simple {
+  width: 100%;
+  text-align: left;
+}
+.form-label {
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-align: left;
+}
+.form-input+.form-label {
+  margin-top: 1.3rem;
+}
+.form-input {
+  margin-top: .4rem;
+}
+.form-simple input, .form-simple textarea {
+  width: 100%;
+  resize: none;
+  padding: 1em;
+  border: 2px solid #333;
+  font-family: sans-serif;
+}
+.form-simple input[type="submit"], .form-simple button[type="submit"] {
+  margin-top: 3em;
+}
+.form-input::placeholder {
+  color: #999;
+}
+.form-btn-holder {
+  text-align: center;
+}
+.form-btn-holder .btn {
+  background-color: #fff;
+}
